@@ -4,14 +4,15 @@ services:
     environment:
       # ⚠️ Required:
       # Change this to your host's public address
-      - WG_HOST=raspberrypi.local
+      - WG_HOST=132.226.148.12
+
 
       # Optional:
       # - PASSWORD=foobar123
-      # - WG_PORT=51820
-      # - WG_DEFAULT_ADDRESS=10.8.0.x
-      # - WG_DEFAULT_DNS=1.1.1.1
-      # - WG_ALLOWED_IPS=192.168.15.0/24, 10.0.1.0/24
+      - WG_PORT=51820
+      - WG_DEFAULT_ADDRESS=192.168.168.x
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_ALLOWED_IPS=192.168.168.0/24
       
     image: weejewel/wg-easy
     container_name: wg-easy
